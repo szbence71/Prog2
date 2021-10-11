@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
             animator.SetBool("Jump", true);
             jump.AddForce(Vector2.up * 400);
         }
+        
+        animator.SetBool("Jump", !IsGrounded());
     }
 
     bool IsGrounded()
