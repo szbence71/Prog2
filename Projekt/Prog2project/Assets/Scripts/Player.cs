@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     private Animator animator;
     private CircleCollider2D collider;
     
-    // Start is called before the first frame update
     void Start()
     {
         jump = GetComponent<Rigidbody2D>();
@@ -17,12 +16,11 @@ public class Player : MonoBehaviour
         collider = GetComponent<CircleCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (IsGrounded() && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            animator.SetBool("Jump", true);
+            //animator.SetBool("Jump", true);
             jump.AddForce(Vector2.up * 400);
         }
         
@@ -34,7 +32,7 @@ public class Player : MonoBehaviour
         float extraHeightText = .01f;
         RaycastHit2D groundCheck = Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + extraHeightText);
         Debug.DrawRay(collider.bounds.center, Vector2.down * (collider.bounds.extents.y + extraHeightText), Color.green);
-        if(groundCheck.collider != null) Debug.Log($"{groundCheck.collider.gameObject.name}");
+        //if(groundCheck.collider != null) Debug.Log($"{groundCheck.collider.gameObject.name}");
 
         return groundCheck.collider != null;
     }
