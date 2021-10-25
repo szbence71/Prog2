@@ -8,3 +8,13 @@
 - Character Movement
 - Jump
 - GroundCheck
+
+2021.10.17-2021.10.21
+- Background movement
+- Background reset
+- Platform movement
+- Platform randomization
+- Collider fixes
+- Character animation fixes
+- GameManager
+- Movement scripts
