@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D jump;
     private Animator animator;
     private CircleCollider2D collider;
-    
+    public float timePassed;
+
     void Start()
     {
         jump = GetComponent<Rigidbody2D>();
@@ -22,6 +23,20 @@ public class Player : MonoBehaviour
         {
             //animator.SetBool("Jump", true);
             jump.AddForce(Vector2.up * 400);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && (Time.time - timePassed) >= 0.7)
+        {
+            timePassed = Time.time;
+            animator.SetTrigger("Attack");
+            RaycastHit2D enemyCast = Physics2D.CircleCast(collider.bounds.center, 0.5f, Vector2.right, 1.01f);
+            if (enemyCast.collider != null)
+            {
+                if (enemyCast.collider.TryGetComponent<Enemy>(out Enemy enemy))
+                {
+                    Destroy(enemy.gameObject);
+                }
+            }
         }
         
         animator.SetBool("Jump", !IsGrounded());

@@ -18,3 +18,8 @@
 - Character animation fixes
 - GameManager
 - Movement scripts
+
+2021.10.26-2021.10.29
+- Attack
+- Enemy
+- Bug fixes (colliders, jump, platforms)
