@@ -19,7 +19,18 @@
 - GameManager
 - Movement scripts
 
-2021.10.26-2021.10.29
+2021.10.26-2021.10.29.
 - Attack
 - Enemy
 - Bug fixes (colliders, jump, platforms)
+
+????.??.??-2021.11.21.
+- Score
+- Main Menu
+- Save
+- Build list
+- More collider fixes
+
+Known bugs:
+- Enemies can't die
+- Score doesn't load

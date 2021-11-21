@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("Oke");
         GameObject go = Instantiate(platforms[Random.Range(0, platforms.Length)], Vector3.right * 8, Quaternion.identity);
+        ScoreScript.scoreValue += 1000;
     }
     private static GameManager _instance;
 

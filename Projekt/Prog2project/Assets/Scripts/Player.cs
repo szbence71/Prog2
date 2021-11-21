@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
                 if (enemyCast.collider.TryGetComponent<Enemy>(out Enemy enemy))
                 {
                     Destroy(enemy.gameObject);
+                    ScoreScript.scoreValue += 2000;
                 }
             }
         }
