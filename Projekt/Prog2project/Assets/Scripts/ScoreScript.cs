@@ -6,17 +6,15 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public static int scoreValue = 0;
+    public static int scoreValue;
     Text score;
     void Start()
     {
-        scoreValue += Convert.ToInt32(System.IO.File.ReadAllText("E:/Save/scorevalue.txt"));
         score = GetComponent<Text>();
     }
     
     void Update()
     {
         score.text = "Currency: " + scoreValue / 1000;
-        
     }
 }

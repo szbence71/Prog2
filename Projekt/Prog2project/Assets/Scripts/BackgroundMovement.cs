@@ -15,12 +15,11 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        // deltaTime előző képkocka óta eltelt idő, hogy minden fps-en konzisztensen mozogjon
         transform.Translate(Vector3.left * Time.deltaTime * speed);
 
         if (transform.position.x < originalX - diff)
         {
-            transform.Translate(Vector3.right * diff); // azé me 1 a right és 1 * diff az diff
+            transform.Translate(Vector3.right * diff);
         }
     }
 }
